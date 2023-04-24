@@ -10,6 +10,7 @@ for(int i=0; i<size; i++)
    
     number[i]=sc.nextInt();
 }
+
 int n=sc.nextInt();
 for(int i=0;i<size;i++)
 {
