@@ -1,6 +1,6 @@
 import java.util.*;
 import java.util.Vector;
-public class PBBirthdayCandes{
+public class PBBirthdayCandles{
     public static int maximum(int m,Vector<Integer> v){
         int count1=0;
         int temp;

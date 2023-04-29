@@ -1,5 +1,5 @@
 import java.util.*;
-public class akshit{
+public class PBbirthdayCandlesM2{
 public static int  largest(int m, int[] A){
 int count1=0;
 int temp;
