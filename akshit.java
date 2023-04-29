@@ -1,12 +1,38 @@
 import java.util.*;
 public class akshit{
-    public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
-       int A[];
-       A=new int[60];
-       for(int i=0;i<4;i++){
-        A[i]=sc.nextInt();
-       }
-System.out.print(A.length);
+public static int  largest(int m, int[] A){
+int count1=0;
+int temp;
+
+    
+    temp=A[0];
+    for(int i=1;i<m;i++){
+        if(temp<A[i]){
+           temp=A[i];
+        }
     }
+    for(int i=0;i<m;i++){
+        if(temp==A[i]){;
+        count1++;
+        }
+    }
+    
+return count1;
 }
+
+
+    public static void main(String[] args){
+        int n;
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+     
+      int[] A=new int[n];
+            for(int i=0;i<n;i++){
+                A[i]=sc.nextInt();
+                  }
+                 System.out.println(largest(n,A));
+            sc.close();
+
+        }
+    }
+
