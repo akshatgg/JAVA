@@ -16,7 +16,7 @@ int temp;
         count1++;
         }
     }
-    
+     
 return count1;
 }
 
