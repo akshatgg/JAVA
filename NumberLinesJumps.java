@@ -1,62 +1,34 @@
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
-
-class Result {
-
-
-
-    public static void   kangaroo(int x1, int v1, int x2, int v2) {
-    // Write your code here
-    if(x1<x2){
-        if(v1>v2){
-            // return "Yes";
-            System.out.println("Yes");
-        }
-        else if(v1<v2){
-            // return "No";
-            System.out.println("No");
-        }
-    }
-    else if(x1>x2){
+public class NumberLinesJumps{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int x1=sc.nextInt();
+        int v1=sc.nextInt();
+        int x2=sc.nextInt();
+        int v2=sc.nextInt();
+       if(x1<x2){
         if(v1<v2){
-            // return "Yes";
-      System.out.println("No");
+            System.out.println("NO");
         }
-        else if(v1>v2){
-            // return "No";
-            System.out.println("Yes");
+        else if(v1>=v2){
+            while(x1!=x2){
+                x1=x1+v1;
+                x2=x2+v2; 
+                if(x1>x2){
+                    break;
+                }
+            }
+            if(x1==x2){
+                System.out.println("YES");
+            }
+            else{
+                System.out.println("NO");
+            }
         }
-    }
-}
-}
-public class NumberLinesJumps {
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        
+       }
 
-        String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
 
-        int x1 = Integer.parseInt(firstMultipleInput[0]);
 
-        int v1 = Integer.parseInt(firstMultipleInput[1]);
-
-        int x2 = Integer.parseInt(firstMultipleInput[2]);
-
-        int v2 = Integer.parseInt(firstMultipleInput[3]);
-
-        String result = Result.kangaroo(x1, v1, x2, v2);
-// System.out.println(Result.kangaroo(x1, v1, x2, v2));
-Result.kangaroo(x1, v1, x2, v2);
-
-        bufferedWriter.write(result);
-        bufferedWriter.newLine();
-
-        bufferedReader.close();
-        bufferedWriter.close();
     }
 }
