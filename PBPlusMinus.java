@@ -7,7 +7,7 @@ import java.util.concurrent.*;
 import java.util.regex.*;
 
 class Result {
-   public static void plusMinus(int n,int[] A) {
+   public static void plusMinus(int n,int[] A) {                                                    
         
         int count1=0,count2=0,count3=0;
     for(int i=0;i<n;i++){
