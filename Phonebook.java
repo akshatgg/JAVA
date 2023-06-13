@@ -1,9 +1,10 @@
 import java.util.HashMap;
 
-public class phonebook {
-   public HashMap<String, Integer> phonebook;
-    public static void phonebook(){
-        HashMap<String,Integer> phonebook=new HashMap<>();
+public class Phonebook {
+   private HashMap<String, Integer> phonebook=new HashMap<>();
+    public Phonebook(){
+        // phonebook=new HashMap<>();
+        // HashMap<String,Integer> phonebook=new HashMap<>();
        phonebook.put("nest",100);
        phonebook.put("alice",964394924);
        
@@ -13,11 +14,14 @@ if(phonebook.containsKey(name)){
 
     System.out.println(phonebook.get(name));
 }
+else{
+    System.out.println("do not present");
+}
     }
     
     public static void main(String[] args){
-        phonebook();
-    phonebook pb=new phonebook();
+        
+    Phonebook pb=new Phonebook();
     pb.find("nest");
     
         
