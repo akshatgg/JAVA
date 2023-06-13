@@ -2,12 +2,15 @@ import java.util.HashMap;
 
 public class Phonebook {
    private HashMap<String, Integer> phonebook=new HashMap<>();
-    public Phonebook(){
+    public  Phonebook(){
         // phonebook=new HashMap<>();
         // HashMap<String,Integer> phonebook=new HashMap<>();
        phonebook.put("nest",100);
        phonebook.put("alice",964394924);
        
+    }
+    public void Add(){
+        phonebook.put("tract",209);
     }
     public void find(String name){
 if(phonebook.containsKey(name)){
@@ -23,6 +26,8 @@ else{
         
     Phonebook pb=new Phonebook();
     pb.find("nest");
+    pb.Add();
+    pb.find("tract");
     
         
 
