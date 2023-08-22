@@ -23,14 +23,9 @@ else{
     }
     
     public static void main(String[] args){
-        
     Phonebook pb=new Phonebook();
     pb.find("nest");
     pb.Add();
     pb.find("tract");
-    
-        
-
-
     }
 }
